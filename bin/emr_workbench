@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'bundler/setup'
+require 'commander/import'
+
+$: << File.expand_path('../lib', File.dirname(__FILE__))
+require 'emr_workbench'
+
+program :version, '0.0.1'
+program :description, 'Elastic Mapreduce workbench.'
+program :help, 'Author', 'Ian Morgan <ian@ruby-code.com>'
+
+command :generate do |c|
+  c.syntax = 'generate <project name>'
+  c.description = "Generates structure for workbench"
+  c.action do |args, options|
+    EMRWorkbench.generate(args, options)
+  end
+end
+
+command :example do |c|
+  c.syntax = 'example'
+  c.description = "Generates the canonical 'Wordcount' example job for EMR"
+  c.action do
+    EMRWorkbench.generate_example
+  end
+end
+
+command :start do |c|
+  c.syntax = 'start'
+  c.description = "Starts a job with the current directory's data and scripts"
+  c.action do
+    EMRWorkbench::Run.start
+  end
+end

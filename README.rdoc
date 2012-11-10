@@ -1,7 +1,36 @@
 = emr_workbench
 
-Description goes here.
+EMR workbench is a command line tool to facilitate creating and running Hadoop mapreduce applications locally and running on Amazon Webservices' Hadoop service. Convention is preferred over configuration but various manifest files can be used to influence behavior.
 
+Uses Hadoop streaming scripts only. They can be written in Bash, Ruby, Python, Etc.
+
+== Directory structure
+
+  --project
+  manifest.yml
+  |  --data
+    (data_manifest.yml)
+  |  --scripts
+    (scripts_manifest.yml)
+
+== CLI Commands
+
+  example              Generates the canonical 'Wordcount' example job for EMR                
+  generate             Generates structure for workbench              
+  help                 Display global or [command] help documentation.                
+  start                Starts a job with the current directory's data and scripts     
+
+== Running the example
+
+Generate the example app:
+
+  emr_workbench example
+
+Run the example app:
+
+  cd wordcount_example/
+  emr_workbench start
+  
 == Contributing to emr_workbench
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
