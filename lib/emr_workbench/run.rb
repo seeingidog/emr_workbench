@@ -27,7 +27,6 @@ module EMRWorkbench
     end
 
     def upload
-      #if the input file listed in manifest is a s3 url, skip this
       if @input_data[0..1] != 's3'
         puts "Uploading data..."
         s3 = Elasticity::SyncToS3(@input_bucket, @aws_access_key, @aws_secret_key, @aws_region)
@@ -59,7 +58,6 @@ module EMRWorkbench
     end
 
     def check_results
-      # Check job status periodically
       stop_statuses = ['COMPLETED', 'FAILED', 'TERMINATED']
       state = ''
       state_change = ''

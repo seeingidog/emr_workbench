@@ -1,6 +1,0 @@
---- 
-emr_manifest: 
-    aws_region: us-east-1
-    aws_access_key: AKIAJVTC4BL3SI5UASNA
-    aws_secret_key: 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
-    output_bucket: mapreduce-output-1328393632

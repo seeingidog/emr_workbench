@@ -1,4 +1,0 @@
---- 
-scripts_manifest: 
-    mapper: s3://elasticmapreduce/samples/wordcount/wordSplitter.py
-    reducer: aggregate

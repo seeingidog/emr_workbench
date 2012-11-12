@@ -1,6 +1,6 @@
 = emr_workbench
 
-EMR workbench is a command line tool to facilitate creating and running Hadoop mapreduce applications locally and running on Amazon Webservices' Hadoop service. Convention is preferred over configuration but various manifest files can be used to influence behavior.
+EMR workbench is a command line tool to facilitate creating and configuring Hadoop mapreduce applications locally and running on Amazon Webservices' Hadoop service. Convention is preferred over configuration but various manifest files can be used to influence behavior.
 
 Uses Hadoop streaming scripts only. They can be written in Bash, Ruby, Python, Etc.
 

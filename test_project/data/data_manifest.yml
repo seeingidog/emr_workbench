@@ -1,3 +1,0 @@
---- 
-data_manifest: 
-    input_files: s3://elasticmapreduce/samples/wordcount/input
